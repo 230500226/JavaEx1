@@ -13,35 +13,32 @@ import java.util.Scanner;
 public class JavaEx1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Enter you first integer");
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        System.out.println("Enter the operation (+, -, *, /)");
-        String operation = scanner.next();
-        System.out.println("Enter you second integer");
-        int b = scanner.nextInt();
 
-        Arithmetic arithmetic = new Arithmetic();
-        double result = 0;
-        switch (operation) {
-            case "+":
-                result = arithmetic.add(a, b);
+
+        System.out.println("Hello World!");
+        System.out.println("Choose the program to run");
+        System.out.println("1. Arithmetic Q1 press 1");
+        System.out.println("2. Comparison Q2 press 2");
+        System.out.println("3. Statistics Q3 press 3");
+
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt(); 
+
+        switch (choice) {
+            case 1:
+                Arithmetic arithmetic = new Arithmetic();
+                arithmetic.start();
                 break;
-            case "-":
-                result = arithmetic.subtract(a, b);
+            case 2:
+ //               comparison();
                 break;
-            case "*":
-                result = arithmetic.multiply(a, b);
-                break;
-            case "/":
-                result = arithmetic.divide(a, b);
+            case 3:
+//                statistics();
                 break;
             default:
-                System.out.println("Invalid operation");
+                System.out.println("Invalid choice");
         }
 
-        System.out.printf("Result of %d and %d is = %.2f\n", a, b, result);
 
         scanner.close(); 
     }
