@@ -30,15 +30,16 @@ public class JavaEx1 {
                 arithmetic.start();
                 break;
             case 2:
- //               comparison();
+                Comparison comparison = new Comparison();
+                comparison.start();
                 break;
             case 3:
-//                statistics();
+                Statistics statistics = new Statistics();
+                statistics.start();
                 break;
             default:
                 System.out.println("Invalid choice");
         }
-
 
         scanner.close(); 
     }
